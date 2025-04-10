@@ -1,0 +1,389 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #003566;
+    text-align: center;
+
+}
+
+header {
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 0;
+    /*espaçamento interno 15px acima e abaixo, e 0px esquerda e direita*/
+    font-size: 24px;
+    border: 1px solid #000000;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    /* Flex Boxing */
+    /* alinhamento na horizontal - espaço entre os links */
+    justify-content: space-between;
+    /* alinhamento na vertical */
+    align-items: center;
+}
+
+#links-menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* configura o estilo das âncoras que estão dentro da nav*/
+nav a {
+    color: #fff;
+    /* texto branco */
+    text-decoration: none;
+    /* não faz decoração no link */
+    padding: 10px 15px;
+    /* 10px é acima e abaixo 15px é esquerda e direita */
+    font-size: 18px;
+    /* 18px é o tamanho da fonte */
+    background: #005663;
+    /* cor de fundo */
+    border-radius: 5px;
+    /* borda com cantos arredondados */
+
+}
+
+nav a:hover {
+    background: #003d82;
+    /* cor de fundo */
+}
+
+img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    /* margem a direita de 20px */
+    border-radius: 10px;
+    /* borda com cantos arredondados */
+
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    /* centraliza o container */
+    background: white;
+    /* cor de fundo */
+    padding: 20px;
+    /* espaçamento interno */
+    border-radius: 10px;
+    /* borda com cantos arredondados */
+    text-align: justify;
+    /* justifica o texto */
+}
+
+h2 {
+    text-align: center;
+    /* alinhamento central */
+}
+
+.subtitulo {
+    text-align: center;
+    /* alinhamento central */
+    font-size: 15px;
+}
+
+table tr td {
+    padding: 15px;
+    /* espaçamento interno */
+}
+
+table {
+    margin: 0 auto;
+    /* centraliza a tabela */
+}
+
+.laranja {
+    background-color: orange;
+    color: #fff
+}
+
+.purple {
+    background-color: purple;
+    color: #fff;
+}
+
+.preta {
+    background-color: black;
+    color: #fff
+}
+
+.azul {
+    background-color: blue
+}
+
+.verde {
+    background-color: green;
+    color: #fff;
+}
+
+.vermelho {
+    background-color: red;
+    color: #fff;
+}
+
+.azulescuro {
+    background-color: rgb(31, 0, 110);
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+    /* Adiciona espaço entre tabelas */
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.campos {
+    margin: 20px;
+    padding: 10px;
+}
+
+.campos label {
+    margin: 20px;
+
+}
+
+.kits {
+    list-style-type: none;
+    /* o marcador original */
+
+}
+
+.flecha::before {
+    content: "→";
+    /* Adiciona flecha */
+    color: rgb(0, 0, 0);
+    /* Define a cor da flecha */
+    font-weight: bold;
+    /* Torna a flecha em negrito */
+    margin-right: 8px;
+    /* Espaçamento entre flecha e texto */
+}
+
+.ponto::before {
+    content: "•";
+    /* Adiciona ponto */
+    color: rgb(0, 0, 0);
+    /* Define a cor do ponto */
+    font-weight: bold;
+    /* Torna o ponto em negrito */
+    margin-right: 8px;
+    /* Espaçamento entre ponto e texto */
+}
+
+.tabela1 {
+    border-collapse: collapse;
+    /* Junta as bordas e remove espaçamento entre elas */
+    background-color: #dbe4f0;
+    text-align: justify;
+}
+
+.tabela1 td {
+    padding: 5;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+}
+
+ul.kits {
+    margin: 0;
+    /* Remove margens externas da lista */
+    padding: 0;
+    /* Remove o espaçamento interno da lista */
+    list-style-type: none;
+    /* Remove marcadores padrão */
+    line-height: 1.5;
+}
+
+.kits .flecha::before {
+    content: "→";
+    /* Adiciona flecha antes dos itens com classe "flecha" */
+    color: rgb(0, 0, 0);
+    /* Define a cor da flecha */
+    font-weight: bold;
+    /* Torna a flecha em negrito */
+    margin-right: 5px;
+    /* Espaço entre a flecha e o texto */
+    line-height: 1;
+}
+
+.kits .confere::before {
+    content: "✓";
+    /* Adiciona flecha antes dos itens com classe "flecha" */
+    color: rgb(0, 0, 0);
+    /* Define a cor da flecha */
+    font-weight: bold;
+    /* Torna a flecha em negrito */
+    margin-right: 5px;
+    /* Espaço entre a flecha e o texto */
+    line-height: 1;
+}
+
+.kits .ponto::before {
+    content: "•";
+    /* Adiciona ponto antes dos itens com classe "ponto" */
+    color: black;
+    /* Define a cor do ponto */
+    margin-right: 5px;
+    /* Espaço entre o ponto e o texto */
+}
+
+.nutren {
+    margin-left: 30px;
+}
+
+.pezinho1 {
+    width: 50%;
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.pezinho2 {
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.tabela2 {
+    width: 80%;
+    margin: 20px auto;
+    /* centraliza o container */
+    background: white;
+    /* cor de fundo */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: justify;
+    /* justifica o texto */
+}
+
+.tabela3 {
+    width: 50%;
+    margin: 15px auto;
+    /* centraliza o container */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: justify;
+    background-color: #dbe4f0
+}
+
+.tabela3 li {
+    padding: 5;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+    margin-left: 25px;
+}
+
+.tabela4 {
+    width: 50%;
+    margin: 15px auto;
+    /* centraliza o container */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: justify;
+    background-color: #dbe4f0;
+}
+
+.tabela4 li {
+    padding: 5;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+    margin-left: 25px;
+}
+
+.tabela5 {
+    width: 50%;
+    margin: 15px auto;
+    /* centraliza o container */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: left;
+    background-color: #eceed4;
+    vertical-align: top;
+    padding: 8;
+}
+
+.i2 {
+    text-align: left;
+    padding: 8;
+    vertical-align: top;
+    margin: 0%;
+}
+
+.tabela5 li {
+    padding: 0px;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+    margin-left: 25px;
+}
+
+.pezinho3 {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.tabela6 {
+    width: 50%;
+    margin: 15px auto;
+    /* centraliza o container */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: justify;
+    background-color: #dbe4f0
+}
+
+.tabela6 li {
+    padding: 5;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+    margin-left: 25px;
+}
+.container1 {
+    width: 50%;
+    margin: 20px auto;
+    /* centraliza o container */
+    background: white;
+    /* cor de fundo */
+    padding: 20px;
+    /* espaçamento interno */
+    border-radius: 10px;
+    /* borda com cantos arredondados */
+    text-align: justify;
+}
