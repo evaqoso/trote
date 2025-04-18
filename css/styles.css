@@ -132,7 +132,10 @@ table {
     background-color: rgb(31, 0, 110);
     color: #fff;
 }
-
+.cinza {
+    background-color: rgb(87, 112, 112);
+    color: #fff;
+}
 table {
     border-collapse: collapse;
     width: 50%;
@@ -386,4 +389,44 @@ ul.kits {
     border-radius: 10px;
     /* borda com cantos arredondados */
     text-align: justify;
+}
+.pezinho3 {
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.tabela7 {
+    border-collapse: collapse;
+    /* Junta as bordas e remove espaçamento entre elas */
+    background-color: #ffffff;
+    text-align: justify;
+}
+
+.tabela7 td {
+    padding: 5;
+    /* Remove o espaçamento interno das células */
+    vertical-align: top;
+    /* Alinha o conteúdo ao topo */
+    text-align: left;
+    /* Mantém o texto alinhado à esquerda */
+    font-family: Arial, sans-serif;
+}
+.container2 {
+width: 80%;
+    margin: 20px auto;
+    /* centraliza o container */
+    background: white;
+    /* cor de fundo */
+    padding: 0px;
+    /* espaçamento interno */
+    border-radius: 10px;
+    /* borda com cantos arredondados */
+    text-align: justify;
+    /* justifica o texto */
+}
+.pezinho4 {
+    width: 90%;
+    text-align: justify;
+    margin: 0 auto;
 }
