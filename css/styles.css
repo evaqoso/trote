@@ -379,11 +379,33 @@ ul.kits {
     width: 50%;
     margin: 20px auto;
     /* centraliza o container */
-    background: white;
-    /* cor de fundo */
-    padding: 20px;
-    /* espaçamento interno */
-    border-radius: 10px;
-    /* borda com cantos arredondados */
     text-align: justify;
+}
+.pezinho4 {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 15px;
+    vertical-align: top;
+}
+.container2 {
+    width: 90%;
+    margin: 20px auto;
+    /* centraliza o container */
+    text-align: justify;
+}
+.tabela8 {
+    width: 50%;
+    margin: 15px auto;
+    /* centraliza o container */
+    padding: 10px;
+    /* espaçamento interno */
+    text-align: justify;
+    background-color: #dbe4f0
+}
+.tabela8 p {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 0px;
+
 }
