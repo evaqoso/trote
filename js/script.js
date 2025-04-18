@@ -1,158 +1,65 @@
 function calcular() {
-    // declaração variável sem tipo
-    let soma = 0
+    let soma = 0;
 
-    // recupera o valor da ação social digitado pelo usuário
-    let acaosocial = document.getElementById("acaosocial").value
-    soma = soma + Number(acaosocial)
+    const getVal = (id) => Number(document.getElementById(id).value);
 
-    // recupera o valor da homenagem digitado pelo usuário
-    let homenagem = document.getElementById("homenagem").value
-    soma = soma + Number(homenagem)
+    const equipe = document.getElementById("equipe").value;
 
-    // recupera a quantidade de leite
-    let leite = document.getElementById("leite").value
-    soma = soma + (2 * Number(leite))
+    soma += getVal("acaosocial");
+    soma += getVal("homenagem");
+    soma += 2 * getVal("leite");
+    soma += 5 * getVal("arroz");
+    soma += 1 * getVal("arroz1");
+    soma += 2 * getVal("feijao");
+    soma += 1 * getVal("feijao1");
+    soma += 0.5 * getVal("macarrao");
+    soma += 1 * getVal("oleo");
 
-    // recupera a quantidade de kit
-    let kit = Number(document.getElementById("kit").value)
-    
-    // recupera a cor da  equipe
-    let equipe = document.getElementById("equipe").value
+    const kit = getVal("kit");
+    const suplemento = getVal("suplemento");
+    const sangue = getVal("sangue");
 
-    let suplemento = document.getElementById("suplemento").value
+    let pontosKit = 0;
+    let pontosSangue = 0;
 
-    let pontosKit = 0 // variável para guardar os pontos do kit
+    const faixasKit = {
+        "Laranja": [ [97, 49, 5000], [78, 39, 4000], [49, 25, 2500], [19, 10, 1000] ],
+        "Preta":   [ [103, 52, 5000], [82, 42, 4000], [52, 26, 2500], [21, 10, 1000] ],
+        "Roxa":    [ [102, 51, 5000], [82, 41, 4000], [51, 26, 2500], [20, 10, 1000] ],
+        "Verde":   [ [88, 44, 5000], [70, 35, 4000], [44, 22, 2500], [18, 9, 1000] ],
+        "Vermelha":[ [93, 47, 5000], [74, 38, 4000], [47, 24, 2500], [19, 9, 1000] ],
+    };
 
-
-    // recupera a quantidade de pacotes de arroz de 5 kg
-    let arroz = document.getElementById("arroz").value
-    soma = soma + Number(5 * Number(arroz))
-
-    // recupera a quantidade de pacotes de arroz de 1 kg
-    let arroz1 = document.getElementById("arroz1").value
-    soma = soma + Number(1 * Number(arroz1))
-
-    // recupera a quantidade de pacotes de feijão de 2 kg
-    let feijao = document.getElementById("feijao").value
-    soma = soma + Number(2 * Number(feijao))
-
-    // recupera a quantidade de pacotes de feijão de 1 kg
-    let feijao1 = document.getElementById("feijao1").value
-    soma = soma + Number(1 * Number(feijao1))
-
-    // recupera a quantidade de pacotes de macarrão
-    let macarrao = document.getElementById("macarrao").value
-    soma = soma + Number(0.5 * Number(macarrao))
-
-    // recupera a quantidade de litros de óleo
-    let oleo = document.getElementById("oleo").value
-    soma = soma + Number(1 * Number(oleo))
-
-    // recupera a quantidade de doações de sangue
-    let sangue = document.getElementById("sangue").value
-    soma = soma + Number(20 * Number(sangue))
-
-    if (equipe == "Laranja"){
-        if (kit >= 97 && suplemento >= 49) {
-            pontosKit = 5000 + ((kit - 97) * 30) + ((suplemento - 49) * 15)
-    
-        } else if (kit >= 78 && suplemento >= 39) {
-            pontosKit = 4000 + ((kit - 78) * 30) + ((suplemento - 39) * 15)
-    
-        } else if (kit >= 49 && suplemento >= 25) {
-            pontosKit = 2500 + ((kit - 49) * 30) + ((suplemento - 25) * 15)
-    
-        } else if (kit >= 19 && suplemento >= 10) {
-            pontosKit = 1000 + ((kit - 19) * 30) + ((suplemento - 10) * 15)
-            
+    const faixas = faixasKit[equipe];
+    for (let [kitBase, supBase, basePts] of faixas) {
+        if (kit >= kitBase && suplemento >= supBase) {
+            const extraKit = kit - kitBase;
+            const extraSup = suplemento - supBase;
+            const kitBonus = basePts + (extraKit * (basePts === 1000 ? 21 : 30)) + (extraSup * 15);
+            pontosKit = kitBonus;
+            break;
         }
     }
-    else if (equipe == "Preta"){
-        if (kit >= 103 && suplemento >= 52) {
-            pontosKit = 5000 + ((kit - 103) * 30) + ((suplemento - 52) * 15)
-    
-        } else if (kit >= 82 && suplemento >= 42) {
-            pontosKit = 4000 + ((kit - 82) * 30) + ((suplemento - 42) * 15)
-    
-        } else if (kit >= 52 && suplemento >= 26) {
-            pontosKit = 2500 + ((kit - 52) * 30) + ((suplemento - 26) * 15)
-    
-        } else if (kit >= 21 && suplemento >= 10) {
-            pontosKit = 1000 + ((kit - 19) * 21) + ((suplemento - 10) * 15)
-            
-        }
-    }
-    else if (equipe == "Roxa"){
-        if (kit >= 102 && suplemento >= 51) {
-            pontosKit = 5000 + ((kit - 102) * 30) + ((suplemento - 51) * 15)
-    
-        } else if (kit >= 82 && suplemento >= 41) {
-            pontosKit = 4000 + ((kit - 82) * 30) + ((suplemento - 41) * 15)
-    
-        } else if (kit >= 51 && suplemento >= 26) {
-            pontosKit = 2500 + ((kit - 51) * 30) + ((suplemento - 26) * 15)
-    
-        } else if (kit >= 20 && suplemento >= 10) {
-            pontosKit = 1000 + ((kit - 20) * 21) + ((suplemento - 10) * 15)
-            
-        }
-    }
-    else if (equipe == "Verde"){
-        if (kit >= 88 && suplemento >= 44) {
-            pontosKit = 5000 + ((kit - 88) * 30) + ((suplemento - 44) * 15)
-    
-        } else if (kit >= 70 && suplemento >= 35) {
-            pontosKit = 4000 + ((kit - 70) * 30) + ((suplemento - 35) * 15)
-    
-        } else if (kit >= 44 && suplemento >= 22) {
-            pontosKit = 2500 + ((kit - 44) * 30) + ((suplemento - 22) * 15)
-    
-        } else if (kit >= 18 && suplemento >= 9) {
-            pontosKit = 1000 + ((kit - 18) * 21) + ((suplemento - 9) * 15)
-            
-        }
-    }
-    else if (equipe == "Verde"){
-        if (kit >= 88 && suplemento >= 44) {
-            pontosKit = 5000 + ((kit - 88) * 30) + ((suplemento - 44) * 15)
-    
-        } else if (kit >= 70 && suplemento >= 35) {
-            pontosKit = 4000 + ((kit - 70) * 30) + ((suplemento - 35) * 15)
-    
-        } else if (kit >= 44 && suplemento >= 22) {
-            pontosKit = 2500 + ((kit - 44) * 30) + ((suplemento - 22) * 15)
-    
-        } else if (kit >= 18 && suplemento >= 9) {
-            pontosKit = 1000 + ((kit - 18) * 21) + ((suplemento - 9) * 15)
-            
-        }
-    }
-    else if (equipe == "Vermelha"){
-            if (kit >= 93 && suplemento >= 47) {
-            pontosKit = 5000 + ((kit - 93) * 30) + ((suplemento - 47) * 15)
-    
-        } else if (kit >= 74 && suplemento >= 38) {
-            pontosKit = 4000 + ((kit - 74) * 30) + ((suplemento - 38) * 15)
-    
-        } else if (kit >= 47 && suplemento >= 24) {
-            pontosKit = 2500 + ((kit - 47) * 30) + ((suplemento - 24) * 15)
-    
-        } else if (kit >= 19 && suplemento >= 9) {
-            pontosKit = 1000 + ((kit - 19) * 21) + ((suplemento - 9) * 15)
-            
-        }
-    }
-    if (equipe == "Laranja"){
-        if (sangue >= 49) {
-            pontosKit = 2500 + (sangue - 49) * 15
-    
-        }
-    else if (equipe == "Preta"){
-        soma = soma + pontosKit // adiciona os pontos do kit à soma total
-        // recupera a quantidade de latas de suplemento
+
+    // Sangue
+    const sangueMetas = {
+        "Laranja": 49,
+        "Preta": 52,
+        "Roxa": 51,
+        "Verde": 44,
+        "Vermelha": 47
+    };
+
+    const metaSangue = sangueMetas[equipe];
+    if (sangue >= metaSangue) {
+        const multiplicador = equipe === "Verde" || equipe === "Vermelha" ? 200 : 20;
+        pontosSangue = 2500 + (sangue - metaSangue) * multiplicador;
+    } else {
+        pontosSangue = sangue * 20;
     }
 
-    // devolve o resultado para o HTML
-    document.getElementById("soma").innerHTML = soma.toFixed(2)
+    soma += pontosKit + pontosSangue;
+
+    // Exibe o total
+    document.getElementById("soma").innerHTML = `Pontos: ${soma.toFixed(2)}`;
 }
