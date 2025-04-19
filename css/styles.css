@@ -409,3 +409,26 @@ ul.kits {
     margin-left: 0px;
 
 }
+footer.footer {
+    background-color: #001d3d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 2px solid #28a745;
+}
+
+footer.footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0066cc;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
