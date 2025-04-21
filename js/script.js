@@ -6,6 +6,14 @@ function calcular() {
     let acaosocial = document.getElementById("acaosocial").value;
     soma = soma + Number(acaosocial);
 
+    // recupera o valor da ação social digitado pelo usuário
+    let mascote = document.getElementById("mascote").value;
+    soma = soma + Number(mascote);
+
+    // recupera o valor da ação social digitado pelo usuário
+    let caracter = document.getElementById("caracter").value;
+    soma = soma + Number(caracter);
+
     // recupera o valor da homenagem digitado pelo usuário
     let homenagem = document.getElementById("homenagem").value;
     soma = soma + Number(homenagem);
