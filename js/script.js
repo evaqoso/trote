@@ -17,9 +17,11 @@ function calcular() {
     // recupera o valor da homenagem digitado pelo usuário
     let homenagem = document.getElementById("homenagem").value;
     soma = soma + Number(homenagem);
+    
     // recupera o valor da homenagem digitado pelo usuário
     let audio = document.getElementById("audio").value;
     soma = soma + Number(audio);
+
     // recupera o valor da homenagem digitado pelo usuário
     let recreativas = document.getElementById("recreativas").value;
     soma = soma + Number(recreativas);
