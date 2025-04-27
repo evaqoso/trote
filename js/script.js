@@ -20,6 +20,9 @@ function calcular() {
     // recupera o valor da homenagem digitado pelo usuário
     let audio = document.getElementById("audio").value;
     soma = soma + Number(audio);
+    // recupera o valor da homenagem digitado pelo usuário
+    let recreativas = document.getElementById("recreativas").value;
+    soma = soma + Number(recreativas);
 
     // recupera a quantidade de leite
     let leite = document.getElementById("leite").value;
